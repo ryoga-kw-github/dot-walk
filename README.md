@@ -1,1 +1,2 @@
 # dot-walk
+HTMLのCanvas要素と素のJavaScriptを使って初期のドラ〇エ風の動きを再現する。
