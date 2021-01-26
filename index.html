@@ -2,39 +2,34 @@
 <html>
     <head></head>
     <body>
-        <canvas id="field"></canvas>
+        <canvas id="field" width="400" height="400"></canvas>
         <script>
             const canvas = document.getElementById('field');
             const field = canvas.getContext('2d');
-            const ballRadius = 10;
-            const x = canvas.width/2;
-            const y = canvas.height-30;
-            const dx = 2;
-            const dy =-2;
-
-            function drawBall() {
-                field.beginPath();
-                field.arc(x, y, ballRadius, 0, Math.PI*2);
-                field.fillStyle = "green";
-                field.fill();
-                field.closePath();
-            }
-
-            function draw() {
-                field.clearRect(0, 0, canvas.width, canvas.height);
-                drawBall();
-
-                if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-                    dx = -dx;
-                }
-                if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-                    dy = -dy;
-                }
-
-                x += dx;
-                y += dy;
-            }
             
+            //canvasのサイズ(400*400)
+            const x = 0;
+            const max_x = 400;
+            const y = 0;
+            const max_y = 400;
+
+            //入力したキー(↑,↓,→,←)を識別して関数に入れる
+
+            
+            //↑キー押したときに動く関数
+                //座標を更新する
+                //draw()で再描画する
+            //↓キー押したときに動く関数
+                //座標を更新する
+                //draw()で再描画する
+            //→キー押したときに動く関数
+                //座標を更新する
+                //draw()で再描画する
+            //←キー押したときに動く関数
+
+
+            //draw() (描画する関数)
+
             setInterval(draw, 10);
         </script>
     </body>
