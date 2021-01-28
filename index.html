@@ -14,24 +14,49 @@
             const max_y = 400;
             
 
-            //入力したキー(↑,↓,→,←)を識別して関数に入れる
+            //入力したキー(↑,↓,→,←)を識別して、それぞれ押したときの処理を書く
+            document.body.addEventListener('keydown',
+                event => {
+                    switch (event.key) {
+                        
+                        //↓キー押したときに動く
+                        case 'ArrowDown':
+                            alert("↓")
+                            //座標//座標を更新する
+                            //draw()で再描画するを更新する
+                            break;
+                    
+                        //↑キー押したときに動く
+                        case 'ArrowUp':
+                            alert("↑")
+                            //座標を更新する
+                            //draw()で再描画する
+                            break;
 
+                        //→キー押したときに動く
+                        case 'ArrowRight':
+                            alert("→")
+                            //座標を更新する
+                            //draw()で再描画する
+                            break;
+                        
+                        //←キー押したときに動く
+                        case 'ArrowLeft':
+                            alert("←")
+                            //座標を更新する
+                            //draw()で再描画する
+                            break;
 
-            //↑キー押したときに動く関数
-                //座標を更新する
-                //draw()で再描画する
-            //↓キー押したときに動く関数
-                //座標を更新する
-                //draw()で再描画する
-            //→キー押したときに動く関数
-                //座標を更新する
-                //draw()で再描画する
-            //←キー押したときに動く関数
-
-
+                        case 'g':
+                            draw();
+                            break;
+                    }
+                });
+                            
             //draw() (描画する関数)
-
-            setInterval(draw, 10);
+            function draw() {
+                alert("draw() func is active.")
+            }
         </script>
     </body>
 </html>
