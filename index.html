@@ -13,6 +13,9 @@
             const y = 0;
             const max_y = 400;
             
+            //キャラクターを配置
+            const als_down = new Image();
+            als_down.src = "../img/als_down.png"
 
             //入力したキー(↑,↓,→,←)を識別して、それぞれ押したときの処理を書く
             document.body.addEventListener('keydown',
@@ -56,6 +59,7 @@
             //draw() (描画する関数)
             function draw() {
                 alert("draw() func is active.")
+                field.drawImage(als_down, 200, 200);
             }
         </script>
     </body>
