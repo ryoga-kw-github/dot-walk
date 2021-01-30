@@ -7,9 +7,13 @@
             const canvas = document.getElementById('field');
             const field = canvas.getContext('2d');
             
-            //初期位置
+            //これらの変数に(キャラの)画像データを代入できるようにしておく
             const als_down = new Image();
-            als_down.src = "../img/als_down.png"
+            const als_up = new Image();
+            const als_right = new Image();
+            const als_left = new Image();
+            
+            
             
             //座標用の変数
             var x = (canvas.width - als_down.width) / 2;
@@ -24,8 +28,11 @@
                         
                         //↓キー押したときに動く
                         case 'ArrowDown':
+                            //上で宣言した変数にキャラ画像を代入
                             als_down.src = "../img/als_down.png"
+                            //Canvasを再描画する
                             field.clearRect(0, 0, canvas.width, canvas.height);
+                            //座標の数値を更新して、キャラ画像を描画する
                             field.drawImage(als_down, x, y+=als_down.height);
                             break;
                     
