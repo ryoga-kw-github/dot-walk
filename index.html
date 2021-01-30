@@ -25,29 +25,29 @@
                         //↓キー押したときに動く
                         case 'ArrowDown':
                             als_down.src = "../img/als_down.png"
-                            context.clearRect(0, 0, canvas.width, canvas.height);
-                            context.drawImage(als_down, x, y+=als_down.height);
+                            field.clearRect(0, 0, canvas.width, canvas.height);
+                            field.drawImage(als_down, x, y+=als_down.height);
                             break;
                     
                         //↑キー押したときに動く
                         case 'ArrowUp':
                             als_up.src = "../img/als_up.png"
-                            context.clearRect(0, 0, canvas.width, canvas.height);
-                            context.drawImage(als_up, x, y-=als_up.height);
+                            field.clearRect(0, 0, canvas.width, canvas.height);
+                            field.drawImage(als_up, x, y-=als_up.height);
                             break;
 
                         //→キー押したときに動く
                         case 'ArrowRight':
                             als_right.src = "../img/als_right.png"
-                            context.clearRect(0, 0, canvas.width, canvas.height);
-                            context.drawImage(als_right, x+=als_right.height, y);
+                            field.clearRect(0, 0, canvas.width, canvas.height);
+                            field.drawImage(als_right, x+=als_right.height, y);
                             break;
                         
                         //←キー押したときに動く
                         case 'ArrowLeft':
                             als_left.src = "../img/als_left.png"
-                            context.clearRect(0, 0, canvas.width, canvas.height);
-                            context.drawImage(als_left, x-=als_left.height, y);
+                            field.clearRect(0, 0, canvas.width, canvas.height);
+                            field.drawImage(als_left, x-=als_left.height, y);
                             break;
                     }
                 });
