@@ -18,8 +18,13 @@
             //座標用の変数
             var x = (canvas.width - als_down.width) / 2;
             var y = (canvas.height - als_down.height) / 2;
+            
+            function fstalsload() {
+                als_down.src = "../img/als_down.png"
+                field.drawImage(als_down, x, y);
+            }
 
-            field.drawImage(als_down, x, y);
+            window.onload = fstalsload();
 
             //入力したキー(↑,↓,→,←)を識別して、それぞれ押したときの処理を書く
             document.body.addEventListener('keydown',
