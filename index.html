@@ -7,15 +7,15 @@
             const canvas = document.getElementById('field');
             const field = canvas.getContext('2d');
             
-            //canvasのサイズ(400*400)
-            const x = 0;
-            const max_x = 400;
-            const y = 0;
-            const max_y = 400;
-            
-            //キャラクターを配置
+            //初期位置
             const als_down = new Image();
             als_down.src = "../img/als_down.png"
+            
+            //座標用の変数
+            var x = (canvas.width - als_down.width) / 2;
+            var y = (canvas.height - als_down.height) / 2;
+
+            field.drawImage(als_down, x, y);
 
             //入力したキー(↑,↓,→,←)を識別して、それぞれ押したときの処理を書く
             document.body.addEventListener('keydown',
@@ -24,43 +24,34 @@
                         
                         //↓キー押したときに動く
                         case 'ArrowDown':
-                            alert("↓")
-                            //座標//座標を更新する
-                            //draw()で再描画するを更新する
+                            als_down.src = "../img/als_down.png"
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                            context.drawImage(als_down, x, y+=als_down.height);
                             break;
                     
                         //↑キー押したときに動く
                         case 'ArrowUp':
-                            alert("↑")
-                            //座標を更新する
-                            //draw()で再描画する
+                            als_up.src = "../img/als_up.png"
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                            context.drawImage(als_up, x, y-=als_up.height);
                             break;
 
                         //→キー押したときに動く
                         case 'ArrowRight':
-                            alert("→")
-                            //座標を更新する
-                            //draw()で再描画する
+                            als_right.src = "../img/als_right.png"
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                            context.drawImage(als_right, x+=als_right.height, y);
                             break;
                         
                         //←キー押したときに動く
                         case 'ArrowLeft':
-                            alert("←")
-                            //座標を更新する
-                            //draw()で再描画する
-                            break;
-
-                        case 'g':
-                            draw();
+                            als_left.src = "../img/als_left.png"
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                            context.drawImage(als_left, x-=als_left.height, y);
                             break;
                     }
                 });
-                            
-            //draw() (描画する関数)
-            function draw() {
-                alert("draw() func is active.")
-                field.drawImage(als_down, 200, 200);
-            }
+
         </script>
     </body>
 </html>
