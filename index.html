@@ -1,8 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <style>
+            .container {
+                width: 100vw;
+                height: 30vw;
+                display: grid;
+                margin: auto;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 'g2 g3 g1' 'g2 g4 g1';
+            }
+            .area-g2 {
+                grid-area: g2;
+                margin: auto;
+                font-size: 5vw;
+            }
+
+            .area-g3 {
+                grid-area: g3;
+                margin: auto;
+                font-size: 5vw;
+            }
+
+            .area-g1 {
+                grid-area: g1;
+                margin: auto;
+                font-size: 5vw;
+            }
+
+            .area-g4 {
+                grid-area: g4;
+                margin: auto;
+                font-size: 5vw;
+            }
+        </style>
+    </head>
     <body>
-        <canvas id="field" width="400" height="400" style="border-color: black; border: 4px solid;"></canvas>
+        <canvas id="field" width="400" height="400" style="border-color: rgb(0, 0, 0); border: 4px solid;"></canvas>
+
+        <div class='container'>
+            <div class='area-g2'>⬅</div>
+            <div class='area-g3'>⬆</div>
+            <div class='area-g4'>⬇</div>
+            <div class='area-g1'>➡</div>
+        </div>
+
         <script>
             const canvas = document.getElementById('field');
             const field = canvas.getContext('2d');
@@ -61,7 +104,6 @@
                             break;
                     }
                 });
-
         </script>
     </body>
 </html>
