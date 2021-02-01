@@ -119,34 +119,38 @@
                 const btn_right = document.getElementsByClassName('area-g1');
                 const btn_left = document.getElementsByClassName('area-g2');
 
-                //addEventListener
+
                 //下
-                btn_down.addEventListener('click', function() {
+                function downfunc() {
                     als_down.src = "../img/als_down.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_down, x, y+=als_down.height);
-                });
+                }
+                btn_down.addEventListener('click', downfunc, false);
                 
                 //上
-                btn_up.addEventListener('click', function() {
+                function upfunc() {
                     als_up.src = "../img/als_up.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_up, x, y-=als_up.height);
-                });
+                }
+                btn_up.addEventListener('click', upfunc, false);
                 
                 //右
-                btn_right.addEventListener('click', function() {
+                function rightfunc() {
                     als_right.src = "../img/als_right.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_right, x+=als_right.height, y);
-                });
+                }
+                btn_right.addEventListener('click', rightfunc, false);
                 
                 //左
-                btn_left.addEventListener('click', function() {
+                function leftfunc() {
                     als_left.src = "../img/als_left.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_left, x-=als_left.height, y);
-                });
+                }
+                btn_left.addEventListener('click', leftfunc, false);
             };
         </script>
     </body>
