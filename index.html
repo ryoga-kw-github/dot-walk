@@ -43,10 +43,10 @@
         <details>
             <summary>モバイル用ボタン</summary>
             <div class='container'>
-                <div class='area-g4'>⬇</div>
-                <div class='area-g3'>⬆</div>
-                <div class='area-g1'>➡</div>
-                <div class='area-g2'>⬅</div>                
+                <div class='area-g4' onclick="downfunc()">⬇</div>
+                <div class='area-g3' onclick="upfunc()">⬆</div>
+                <div class='area-g1' onclick="rightfunc()">➡</div>
+                <div class='area-g2' onclick="leftfunc()">⬅</div>                
             </div>
         </details>
 
@@ -113,20 +113,12 @@
                 
                 //↓↓↓↓モバイル用の処理↓↓↓↓
 
-                //ボタン(div要素)を取得して定数の中に入れる
-                const btn_down = document.getElementsByClassName('area-g4');
-                const btn_up = document.getElementsByClassName('area-g3');
-                const btn_right = document.getElementsByClassName('area-g1');
-                const btn_left = document.getElementsByClassName('area-g2');
-
-
                 //下
                 function downfunc() {
                     als_down.src = "../img/als_down.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_down, x, y+=als_down.height);
                 }
-                btn_down.addEventListener('click', downfunc, false);
                 
                 //上
                 function upfunc() {
@@ -134,7 +126,6 @@
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_up, x, y-=als_up.height);
                 }
-                btn_up.addEventListener('click', upfunc, false);
                 
                 //右
                 function rightfunc() {
@@ -142,7 +133,6 @@
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_right, x+=als_right.height, y);
                 }
-                btn_right.addEventListener('click', rightfunc, false);
                 
                 //左
                 function leftfunc() {
@@ -150,7 +140,6 @@
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_left, x-=als_left.height, y);
                 }
-                btn_left.addEventListener('click', leftfunc, false);
             };
         </script>
     </body>
