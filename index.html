@@ -73,11 +73,9 @@
                 
                 //初期位置にキャラを配置
                 field.drawImage(als_down, x, y);
-            };
 
-
-            //入力したキー(↑,↓,→,←)を識別して、それぞれ押したときの処理を書く
-            document.body.addEventListener('keydown',
+                //入力したキー(↑,↓,→,←)を識別して、それぞれ押したときの処理を書く
+                document.body.addEventListener('keydown',
                     event => {
                         switch (event.key) {
                             //↓キー押したときに動く
@@ -113,7 +111,9 @@
                         }
                     });
 
-                    
+                
+            };
+
             //↓↓↓↓モバイル用の処理↓↓↓↓
 
             //下
