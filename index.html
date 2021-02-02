@@ -43,10 +43,10 @@
         <details>
             <summary>モバイル用ボタン</summary>
             <div class='container'>
-                <div class='area-g4' onclick="downfunc()">⬇</div>
-                <div class='area-g3' onclick="upfunc()">⬆</div>
-                <div class='area-g1' onclick="rightfunc()">➡</div>
-                <div class='area-g2' onclick="leftfunc()">⬅</div>                
+                <div class='area-g4'">⬇</div>
+                <div class='area-g3'>⬆</div>
+                <div class='area-g1'>➡</div>
+                <div class='area-g2'>⬅</div>                
             </div>
         </details>
 
@@ -114,6 +114,8 @@
                 //↓↓↓↓モバイル用の処理↓↓↓↓
 
                 //下
+                const tch_down = document.getElementsByClassName("area-4")[0];
+                tch_down.addEventListener('click', downfunc, false);
                 function downfunc() {
                     als_down.src = "../img/als_down.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
@@ -121,6 +123,8 @@
                 }
                 
                 //上
+                const tch_up = document.getElementsByClassName("area-3")[0];
+                tch_up.addEventListener('click', upfunc, false);
                 function upfunc() {
                     als_up.src = "../img/als_up.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
@@ -128,6 +132,8 @@
                 }
                 
                 //右
+                const tch_right = document.getElementsByClassName("area-1")[0];
+                tch_right.addEventListener('click', rightfunc, false);
                 function rightfunc() {
                     als_right.src = "../img/als_right.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
@@ -135,6 +141,8 @@
                 }
                 
                 //左
+                const tch_left = document.getElementsByClassName("area-2")[0];
+                tch_left.addEventListener('click', leftfunc, false);
                 function leftfunc() {
                     als_left.src = "../img/als_left.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
