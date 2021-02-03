@@ -114,36 +114,36 @@
                 //↓↓↓↓モバイル用の処理↓↓↓↓
 
                 //下
-                const tch_down = document.getElementsByClassName("area-4")[0];
-                tch_down.addEventListener('click', downfunc, false);
-                function downfunc() {
+                const dwn = document.getElementsByClassName('area-g4')[0];
+                dwn.addEventListener('click', dnfnc, false);
+                function dnfnc() {
                     als_down.src = "../img/als_down.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_down, x, y+=als_down.height);
                 }
                 
                 //上
-                const tch_up = document.getElementsByClassName("area-3")[0];
-                tch_up.addEventListener('click', upfunc, false);
-                function upfunc() {
+                const tch_up = document.getElementsByClassName('area-g3')[0];
+                tch_up.addEventListener('click', upfnc, false);
+                function upfnc() {
                     als_up.src = "../img/als_up.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_up, x, y-=als_up.height);
                 }
                 
                 //右
-                const tch_right = document.getElementsByClassName("area-1")[0];
-                tch_right.addEventListener('click', rightfunc, false);
-                function rightfunc() {
+                const tch_right = document.getElementsByClassName('area-g1')[0];
+                tch_right.addEventListener('click', rtfnc, false);
+                function rtfnc() {
                     als_right.src = "../img/als_right.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_right, x+=als_right.height, y);
                 }
                 
                 //左
-                const tch_left = document.getElementsByClassName("area-2")[0];
-                tch_left.addEventListener('click', leftfunc, false);
-                function leftfunc() {
+                const tch_left = document.getElementsByClassName('area-g2')[0];
+                tch_left.addEventListener('click', ltfnc, false);
+                function ltfnc() {
                     als_left.src = "../img/als_left.png"
                     field.clearRect(0, 0, canvas.width, canvas.height);
                     field.drawImage(als_left, x-=als_left.height, y);
