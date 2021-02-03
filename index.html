@@ -37,7 +37,7 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="imgload">
         <canvas id="field" width="400" height="400" style="border-color: rgb(0, 0, 0); border: 4px solid;"></canvas>
 
         <details>
@@ -50,26 +50,14 @@
             </div>
         </details>
 
-        <script>           
+        <script>
             window.onload = function() {
                 const canvas = document.getElementById('field');
                 const field = canvas.getContext('2d');
                 
-                //これらの変数に(キャラの)画像データを代入できるようにしておく
-                const als_down = new Image();
-                const als_up = new Image();
-                const als_right = new Image();
-                const als_left = new Image();
-                
                 //座標用の変数
                 var x = (canvas.width - als_down.width) / 2;
                 var y = (canvas.height - als_down.height) / 2;
-
-                //画像読み込みが遅いのでここあらかじめ読み込んでおく
-                als_down.src = "../img/als_down.png";
-                als_up.src = "../img/als_up.png";
-                als_right.src = "../img/als_right.png";
-                als_left.src = "../img/als_left.png";
                 
                 //初期位置にキャラを配置
                 field.drawImage(als_down, x, y);
@@ -149,6 +137,20 @@
                     field.drawImage(als_left, x-=als_left.height, y);
                 }
             };
+
+            function imgload() {
+                //これらの変数に(キャラの)画像データを代入できるようにしておく
+                const als_down = new Image();
+                const als_up = new Image();
+                const als_right = new Image();
+                const als_left = new Image();
+
+                //画像読み込みが遅いのでここあらかじめ読み込んでおく
+                als_down.src = "../img/als_down.png";
+                als_up.src = "../img/als_up.png";
+                als_right.src = "../img/als_right.png";
+                als_left.src = "../img/als_left.png";
+            }
         </script>
     </body>
 </html>
