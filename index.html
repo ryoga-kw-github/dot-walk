@@ -37,7 +37,7 @@
             }
         </style>
     </head>
-    <body onload="imgload">
+    <body>
         <h1 style="font-size: 2vw;">⚠キャラクターが読み込まれない場合は手動で再読み込み⚠</h1>
         <canvas id="field" width="400" height="400" style="border-color: rgb(0, 0, 0); border: 4px solid;"></canvas>
 
@@ -142,7 +142,7 @@
                 const dwn = document.getElementsByClassName('area-g4')[0];
                 dwn.addEventListener('click', dnfnc, false);
                 function dnfnc() {
-                    als_down.src = "als_down.png"
+                    als_down.src = "../img/als_down.png";
                     if (y < 352) {
                         field.clearRect(0, 0, canvas.width, canvas.height);
                         field.drawImage(als_down, x, y+=als_down.height);
@@ -157,7 +157,7 @@
                 const tch_up = document.getElementsByClassName('area-g3')[0];
                 tch_up.addEventListener('click', upfnc, false);
                 function upfnc() {
-                    als_up.src = "als_up.png"
+                    als_up.src = "../img/als_up.png";
                     if (y > 10) {
                         field.clearRect(0, 0, canvas.width, canvas.height);
                         field.drawImage(als_up, x, y-=als_up.height);
@@ -172,7 +172,7 @@
                 const tch_right = document.getElementsByClassName('area-g1')[0];
                 tch_right.addEventListener('click', rtfnc, false);
                 function rtfnc() {
-                    als_right.src = "als_right.png"
+                    als_right.src = "../img/als_right.png";
                     if (x < 352) {
                         field.clearRect(0, 0, canvas.width, canvas.height);
                         field.drawImage(als_right, x+=als_right.height, y);
@@ -187,7 +187,7 @@
                 const tch_left = document.getElementsByClassName('area-g2')[0];
                 tch_left.addEventListener('click', ltfnc, false);
                 function ltfnc() {
-                    als_left.src = "als_left.png"
+                    als_left.src = "../img/als_left.png";
                     if (x > 10) {
                         field.clearRect(0, 0, canvas.width, canvas.height);
                         field.drawImage(als_left, x-=als_left.height, y);
@@ -198,13 +198,6 @@
                     }
                 }
             };
-
-            function imgload() {
-                als_down.src = "../img/als_down.png";
-                als_up.src = "../img/als_up.png";
-                als_right.src = "../img/als_right.png";
-                als_left.src = "../img/als_left.png";
-            }
         </script>
     </body>
 </html>
